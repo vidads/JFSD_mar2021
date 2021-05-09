@@ -2,6 +2,7 @@
 const createHTMLList = (index, name, description, imageURL) => `      
             <div class="col-lg-4">
               <div class="card" style="width: 18rem">
+              <div class="content data-tilt data-tilt-glare data-tilt-max-glare="0.8"">
                 <img src=${imageURL} class="card-img-top" alt="image">
                 <div class="card-body">
                   <h5 class="card-title">${name}</h5>
@@ -14,6 +15,7 @@ const createHTMLList = (index, name, description, imageURL) => `
                     data-target="#cardModal"
                     >More</a
                   >
+                  </div>
                 </div>
               </div>
             </div>

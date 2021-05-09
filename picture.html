@@ -7,6 +7,7 @@
     <title>Pictures</title>
     <!-- Bootstrap core CSS -->
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/picture.css" />
   </head>
   <body>
     <!-- Beginning of navbar -->
@@ -68,7 +69,7 @@
     </header>
     <!-- End of Nav Bar -->
     <main>
-      <div class="jumbotron">
+      <div class="jumbotron mt-5">
         <h1 class="display-4">Products</h1>
         <div id="list-items">
           <div id="row" class="row"></div>
@@ -99,6 +100,13 @@
     <script src="js/common.js"></script>
     <script src="js/cardController.js"></script>
     <script src="js/cardListing.js"></script>
+    <script src="js/vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
     <!-- End of Scripts -->
   </body>
 </html>
