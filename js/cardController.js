@@ -1,9 +1,33 @@
 //Doing a Product web app, in product page to display the name, description, imageUrl, style, price
-const createHTMLList = (index, name, description, imageURL) => `      
+const createHTMLList = (
+  index,
+  name,
+  description,
+  imageUrl1,
+  imageUrl2
+) => `      
             <div class="col-lg-4">
               <div class="card" style="width: 18rem">
-              <div class="content data-tilt data-tilt-glare data-tilt-max-glare="0.8"">
-                <img src=${imageURL} class="card-img-top" alt="image">
+                <div class="content">
+                  <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+                    <div class="carousel-inner">
+                     <div class="carousel-item active">
+                     <img src=${imageUrl1} class="card-img-top" alt="First Slide">
+                     </div>
+                     <div class="carousel-item">
+                     <img src=${imageUrl2} class="card-img-top" alt="Second Slide">
+                     </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                       <span class="visually-hidden">Previous</span>
+                    </button>
+                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Next</span>
+                     </button>
+                 </div>             
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">${name}</h5>
                   <p class="card-text">${description}</p>
@@ -15,7 +39,7 @@ const createHTMLList = (index, name, description, imageURL) => `
                     data-target="#cardModal"
                     >More</a
                   >
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -32,11 +56,12 @@ class CardController {
     this._items = [];
   }
   //method to add the items into the array
-  addItem(name, description, imageUrl) {
+  addItem(name, description, imageUrl1, imageUrl2) {
     const itemObj = {
       oName: name,
       oDescription: description,
-      oImageUrl: imageUrl,
+      oImageUrl1: imageUrl1,
+      oImageUrl2: imageUrl2,
     };
     this._items.push(itemObj);
   }
@@ -48,7 +73,8 @@ class CardController {
         i,
         item.oName,
         item.oDescription,
-        item.oImageUrl
+        item.oImageUrl1,
+        item.oImageUrl2
       );
       cardHTMLList.push(cardHTML);
     }

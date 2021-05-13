@@ -68,6 +68,7 @@
       </nav>
     </header>
     <!-- End of Nav Bar -->
+    <!-- Start of Picture Cards -->
     <main>
       <div class="jumbotron mt-5">
         <h1 class="display-4">Our Pictures!!!!</h1>
@@ -97,16 +98,17 @@
       integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
       crossorigin="anonymous"
     ></script>
-    <script src="js/common.js"></script>
+
     <script src="js/cardController.js"></script>
     <script src="js/cardListing.js"></script>
     <script src="js/vanilla-tilt.js"></script>
+    <script src="js/common.js"></script>
     <script>
       VanillaTilt.init(document.querySelectorAll(".card"), {
         max: 25,
         speed: 400,
-        glare: true,
-        "max-glare": 0.5,
+        glare: false,
+        "max-glare": 0.4,
       });
     </script>
     <!-- End of Scripts -->
