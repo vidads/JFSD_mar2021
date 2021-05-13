@@ -4,12 +4,13 @@ const createHTMLList = (
   name,
   description,
   imageUrl1,
-  imageUrl2
+  imageUrl2,
+  carou
 ) => `      
             <div class="col-lg-4">
               <div class="card" style="width: 18rem">
                 <div class="content">
-                  <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false">
+                  <div id="${carou}" class="carousel slide" data-bs-interval="false">
                     <div class="carousel-inner">
                      <div class="carousel-item active">
                      <img src=${imageUrl1} class="card-img-top" alt="First Slide">
@@ -18,11 +19,11 @@ const createHTMLList = (
                      <img src=${imageUrl2} class="card-img-top" alt="Second Slide">
                      </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#${carou}" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                        <span class="visually-hidden">Previous</span>
                     </button>
-                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                     <button class="carousel-control-next" type="button" data-bs-target="#${carou}" data-bs-slide="next">
                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
                      <span class="visually-hidden">Next</span>
                      </button>
@@ -56,12 +57,13 @@ class CardController {
     this._items = [];
   }
   //method to add the items into the array
-  addItem(name, description, imageUrl1, imageUrl2) {
+  addItem(name, description, imageUrl1, imageUrl2, carou) {
     const itemObj = {
       oName: name,
       oDescription: description,
       oImageUrl1: imageUrl1,
       oImageUrl2: imageUrl2,
+      oCarou: carou,
     };
     this._items.push(itemObj);
   }
@@ -74,7 +76,8 @@ class CardController {
         item.oName,
         item.oDescription,
         item.oImageUrl1,
-        item.oImageUrl2
+        item.oImageUrl2,
+        item.oCarou
       );
       cardHTMLList.push(cardHTML);
     }
