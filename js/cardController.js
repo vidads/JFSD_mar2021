@@ -36,8 +36,8 @@ const createHTMLList = (
                     id="${index}"
                     href="#"
                     class="btn btn-primary"
-                    data-toggle="modal"
-                    data-target="#cardModal"
+                    data-bs-toggle="modal"
+                    data-bs-target="#cardModal"
                     >More</a
                   >
                   
@@ -46,12 +46,13 @@ const createHTMLList = (
             </div>
             `;
 
-// function displayProductDetails(item) {
-//   document.querySelector("#modalName").innerText = item.oName;
-//   document.querySelector("#modalImg").src = item.oImageUrl;
-//   document.querySelector("#modalStyle").innerText = item.oStyle;
-//   document.querySelector("#modalPrice").innerText = item.oPrice;
-// }
+function displayProductDetails(item) {
+  document.querySelector("#modalName").innerText = item.oName;
+  document.querySelector("#modalImg").src = item.oImageUrl1;
+  document.querySelector("#modalImg2").src = item.oImageUrl2;
+  document.querySelector("#modalStyle").innerText = item.oStyle;
+  document.querySelector("#modalPrice").innerText = item.oPrice;
+}
 class CardController {
   constructor() {
     this._items = [];
@@ -85,12 +86,12 @@ class CardController {
     const pHTML = cardHTMLList.join(`\n`);
     document.querySelector("#row").innerHTML = pHTML;
 
-    //addEventListener - click
-    // for (var i = 0; i < this._items.length; i++) {
-    //   const item = this._items[i];
-    //   document.getElementById(i).addEventListener("click", function () {
-    //     displayProductDetails(item);
-    //   });
-    // }
+    // addEventListener - click;
+    for (var i = 0; i < this._items.length; i++) {
+      const item = this._items[i];
+      document.getElementById(i).addEventListener("click", function () {
+        displayProductDetails(item);
+      });
+    }
   }
 } //End of CardController class
