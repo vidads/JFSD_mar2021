@@ -54,6 +54,10 @@ h1 {
   opacity: 1;
 }
 
+.modal-dialog {
+  margin: 20vh auto 0px auto;
+}
+
 .modal-body,
 .modal-back {
   top: 0;
@@ -63,6 +67,7 @@ h1 {
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
+
 .modal-content {
   text-align: center;
   position: relative;
