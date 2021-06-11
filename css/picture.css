@@ -53,3 +53,53 @@ h1 {
   transform: translateY(0px);
   opacity: 1;
 }
+
+.modal-body,
+.modal-back {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.modal-content {
+  text-align: center;
+  position: relative;
+  transition: transform 3s;
+  transform-style: preserve-3d;
+}
+
+.modal-content:active:hover {
+  transform: rotateY(0.5turn);
+}
+
+.modal-header {
+  transform: translateZ(125px);
+}
+
+.modalImages {
+  transform: translateZ(70px);
+}
+
+.info1,
+.modal-footer {
+  transform: translateZ(125px);
+}
+
+.modal-back {
+  position: absolute;
+  transform: rotateY(0.5turn);
+  background: lightblue;
+}
+
+.modal-back #modalBack {
+  text-align: center;
+  align-items: center;
+  font-size: 5rem;
+  padding-top: 200px;
+}
+
+#modalBack {
+  transform: translateZ(150px);
+}

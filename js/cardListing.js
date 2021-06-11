@@ -21,14 +21,14 @@ function loadData() {
     "Night Coders",
     "E-commerce",
     "images/Night_Coders.jpg",
-    "images/FaVor_It3.jpg",
+    "images/Night_Coders2.jpg",
     "carou3"
   );
   cardControl.addItem(
     "The Minimalists",
     "E-commerce",
     "images/The_Minimalists.jpg",
-    "images/FaVor_It3.jpg",
+    "images/The_Minimalists2.jpg",
     "carou4"
   );
   cardControl.addItem(

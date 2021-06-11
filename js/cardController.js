@@ -50,8 +50,7 @@ function displayProductDetails(item) {
   document.querySelector("#modalName").innerText = item.oName;
   document.querySelector("#modalImg").src = item.oImageUrl1;
   document.querySelector("#modalImg2").src = item.oImageUrl2;
-  document.querySelector("#modalStyle").innerText = item.oStyle;
-  document.querySelector("#modalPrice").innerText = item.oPrice;
+  document.querySelector("#modalBack").innerText = item.oName;
 }
 class CardController {
   constructor() {
