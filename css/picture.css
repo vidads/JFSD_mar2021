@@ -108,3 +108,11 @@ h1 {
 #modalBack {
   transform: translateZ(150px);
 }
+
+body.modal-open .jumbotron {
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+}
