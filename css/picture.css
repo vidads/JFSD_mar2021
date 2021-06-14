@@ -71,7 +71,7 @@ h1 {
 .modal-content {
   text-align: center;
   position: relative;
-  transition: transform 3s;
+  transition: transform 1.5s;
   transform-style: preserve-3d;
 }
 
@@ -80,16 +80,16 @@ h1 {
 }
 
 .modal-header {
-  transform: translateZ(125px);
+  transform: translateZ(100px);
 }
 
 .modalImages {
-  transform: translateZ(70px);
+  transform: translateZ(50px);
 }
 
 .info1,
 .modal-footer {
-  transform: translateZ(125px);
+  transform: translateZ(100px);
 }
 
 .modal-back {
